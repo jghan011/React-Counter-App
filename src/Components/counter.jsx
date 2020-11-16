@@ -3,11 +3,15 @@ import React, { Component } from 'react'
 
 class Counter  extends Component {
     state = {
-        count:0
+        count:0,
         
     };// is special object that includes any data the component needs
     render() { 
-        return (<React.Fragment><span>{this.formatCount()}</span><button>Increment</button></React.Fragment> // jsx expression
+        return (
+        <div>
+            <span className="badge badge-primary">{this.formatCount()}</span>
+            <button>Increment</button>
+        </div> // jsx expression
         //jsx expressions must have one parent element so wrapping it with a div is best or easiest
         );
 
@@ -16,7 +20,8 @@ class Counter  extends Component {
 
 formatCount() {
     const {count} = this.state; // now
-    return count === 0 ? 'Zero' : count;
+    return count === 0 ? "Zero" : count;
+    
 }
 }
 
